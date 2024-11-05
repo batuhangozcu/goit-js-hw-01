@@ -1,11 +1,13 @@
-function getElementWidth(x, y, z) {
+function getElementWidth(content, padding, border) {
   //   const a = x.slice(0, -2);
   //   const b = y.slice(0, -2) * 2;
   //   const c = z.slice(0, -2) * 2;
   //   console.log(Number(a) + Number(b) + Number(c));
-  console.log(
-    Number.parseFloat(x) + Number.parseFloat(y) * 2 + Number.parseFloat(z) * 2
-  );
+  const result =
+    Number.parseFloat(content) +
+    Number.parseFloat(padding) * 2 +
+    Number.parseFloat(border) * 2;
+  return result;
 }
 
 console.log(getElementWidth("50px", "8px", "4px")); // 74
